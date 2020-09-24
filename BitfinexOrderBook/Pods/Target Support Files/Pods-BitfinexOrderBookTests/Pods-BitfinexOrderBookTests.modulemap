@@ -1,0 +1,6 @@
+framework module Pods_BitfinexOrderBookTests {
+  umbrella header "Pods-BitfinexOrderBookTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

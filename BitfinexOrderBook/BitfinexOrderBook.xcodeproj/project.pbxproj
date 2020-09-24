@@ -15,6 +15,9 @@
 		7721E9D8251C7043002206A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7721E9D6251C7043002206A0 /* LaunchScreen.storyboard */; };
 		7721E9E3251C7044002206A0 /* BitfinexOrderBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721E9E2251C7044002206A0 /* BitfinexOrderBookTests.swift */; };
 		7721E9EE251C7044002206A0 /* BitfinexOrderBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721E9ED251C7044002206A0 /* BitfinexOrderBookUITests.swift */; };
+		8B95AFBB77A4A072E91317C2 /* Pods_BitfinexOrderBookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BE216DBB121A930BA903E8 /* Pods_BitfinexOrderBookTests.framework */; };
+		C5CE693E6EA3DC6AB74EC373 /* Pods_BitfinexOrderBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A996DF5869161E1E97B14C9 /* Pods_BitfinexOrderBook.framework */; };
+		DC2C85D90837077F11FA14A9 /* Pods_BitfinexOrderBookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE03208B9DF39A20C641AD2F /* Pods_BitfinexOrderBookUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10D4861EF4A434D7662E445A /* Pods-BitfinexOrderBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitfinexOrderBookTests.release.xcconfig"; path = "Target Support Files/Pods-BitfinexOrderBookTests/Pods-BitfinexOrderBookTests.release.xcconfig"; sourceTree = "<group>"; };
+		17BE216DBB121A930BA903E8 /* Pods_BitfinexOrderBookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitfinexOrderBookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A996DF5869161E1E97B14C9 /* Pods_BitfinexOrderBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitfinexOrderBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F6E86AFC44E59EEF5105AEC /* Pods-BitfinexOrderBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitfinexOrderBook.release.xcconfig"; path = "Target Support Files/Pods-BitfinexOrderBook/Pods-BitfinexOrderBook.release.xcconfig"; sourceTree = "<group>"; };
+		4F85A53FB1389180FC492FCD /* Pods-BitfinexOrderBookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitfinexOrderBookUITests.release.xcconfig"; path = "Target Support Files/Pods-BitfinexOrderBookUITests/Pods-BitfinexOrderBookUITests.release.xcconfig"; sourceTree = "<group>"; };
+		600B590540D633C2004867F6 /* Pods-BitfinexOrderBook-BitfinexOrderBookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitfinexOrderBook-BitfinexOrderBookUITests.release.xcconfig"; path = "Target Support Files/Pods-BitfinexOrderBook-BitfinexOrderBookUITests/Pods-BitfinexOrderBook-BitfinexOrderBookUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7721E9C8251C7041002206A0 /* BitfinexOrderBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitfinexOrderBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7721E9CB251C7041002206A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7721E9CD251C7042002206A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +58,11 @@
 		7721E9E9251C7044002206A0 /* BitfinexOrderBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitfinexOrderBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7721E9ED251C7044002206A0 /* BitfinexOrderBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitfinexOrderBookUITests.swift; sourceTree = "<group>"; };
 		7721E9EF251C7044002206A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE03208B9DF39A20C641AD2F /* Pods_BitfinexOrderBookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitfinexOrderBookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE950A989223220C176F97BA /* Pods-BitfinexOrderBookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitfinexOrderBookTests.debug.xcconfig"; path = "Target Support Files/Pods-BitfinexOrderBookTests/Pods-BitfinexOrderBookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2AA1B216BEFAAD88F9EC02F /* Pods-BitfinexOrderBookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitfinexOrderBookUITests.debug.xcconfig"; path = "Target Support Files/Pods-BitfinexOrderBookUITests/Pods-BitfinexOrderBookUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D35A46D0B8515B54E4622D4A /* Pods-BitfinexOrderBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitfinexOrderBook.debug.xcconfig"; path = "Target Support Files/Pods-BitfinexOrderBook/Pods-BitfinexOrderBook.debug.xcconfig"; sourceTree = "<group>"; };
+		D4F7911DB0CE16062AF9205D /* Pods-BitfinexOrderBook-BitfinexOrderBookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitfinexOrderBook-BitfinexOrderBookUITests.debug.xcconfig"; path = "Target Support Files/Pods-BitfinexOrderBook-BitfinexOrderBookUITests/Pods-BitfinexOrderBook-BitfinexOrderBookUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5CE693E6EA3DC6AB74EC373 /* Pods_BitfinexOrderBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B95AFBB77A4A072E91317C2 /* Pods_BitfinexOrderBookTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC2C85D90837077F11FA14A9 /* Pods_BitfinexOrderBookUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74C06E499559DE3B7A747A02 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D35A46D0B8515B54E4622D4A /* Pods-BitfinexOrderBook.debug.xcconfig */,
+				4F6E86AFC44E59EEF5105AEC /* Pods-BitfinexOrderBook.release.xcconfig */,
+				D4F7911DB0CE16062AF9205D /* Pods-BitfinexOrderBook-BitfinexOrderBookUITests.debug.xcconfig */,
+				600B590540D633C2004867F6 /* Pods-BitfinexOrderBook-BitfinexOrderBookUITests.release.xcconfig */,
+				CE950A989223220C176F97BA /* Pods-BitfinexOrderBookTests.debug.xcconfig */,
+				10D4861EF4A434D7662E445A /* Pods-BitfinexOrderBookTests.release.xcconfig */,
+				D2AA1B216BEFAAD88F9EC02F /* Pods-BitfinexOrderBookUITests.debug.xcconfig */,
+				4F85A53FB1389180FC492FCD /* Pods-BitfinexOrderBookUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7721E9BF251C7041002206A0 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +116,8 @@
 				7721E9E1251C7044002206A0 /* BitfinexOrderBookTests */,
 				7721E9EC251C7044002206A0 /* BitfinexOrderBookUITests */,
 				7721E9C9251C7041002206A0 /* Products */,
+				74C06E499559DE3B7A747A02 /* Pods */,
+				B1B68D2EBCEF666544E216E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +163,16 @@
 			path = BitfinexOrderBookUITests;
 			sourceTree = "<group>";
 		};
+		B1B68D2EBCEF666544E216E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A996DF5869161E1E97B14C9 /* Pods_BitfinexOrderBook.framework */,
+				17BE216DBB121A930BA903E8 /* Pods_BitfinexOrderBookTests.framework */,
+				AE03208B9DF39A20C641AD2F /* Pods_BitfinexOrderBookUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7721E9F2251C7044002206A0 /* Build configuration list for PBXNativeTarget "BitfinexOrderBook" */;
 			buildPhases = (
+				CBEF9AC7F2D1D4491EF3D658 /* [CP] Check Pods Manifest.lock */,
 				7721E9C4251C7041002206A0 /* Sources */,
 				7721E9C5251C7041002206A0 /* Frameworks */,
 				7721E9C6251C7041002206A0 /* Resources */,
+				0B19B0DC7746A521C5028000 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7721E9F5251C7044002206A0 /* Build configuration list for PBXNativeTarget "BitfinexOrderBookTests" */;
 			buildPhases = (
+				4024C9280C2B44B7BEC39D06 /* [CP] Check Pods Manifest.lock */,
 				7721E9DA251C7044002206A0 /* Sources */,
 				7721E9DB251C7044002206A0 /* Frameworks */,
 				7721E9DC251C7044002206A0 /* Resources */,
@@ -170,6 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7721E9F8251C7044002206A0 /* Build configuration list for PBXNativeTarget "BitfinexOrderBookUITests" */;
 			buildPhases = (
+				EACBD51530E67AD6DC792BCF /* [CP] Check Pods Manifest.lock */,
 				7721E9E5251C7044002206A0 /* Sources */,
 				7721E9E6251C7044002206A0 /* Frameworks */,
 				7721E9E7251C7044002206A0 /* Resources */,
@@ -252,6 +301,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B19B0DC7746A521C5028000 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BitfinexOrderBook/Pods-BitfinexOrderBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BitfinexOrderBook/Pods-BitfinexOrderBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BitfinexOrderBook/Pods-BitfinexOrderBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4024C9280C2B44B7BEC39D06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitfinexOrderBookTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBEF9AC7F2D1D4491EF3D658 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitfinexOrderBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EACBD51530E67AD6DC792BCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitfinexOrderBookUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7721E9C4251C7041002206A0 /* Sources */ = {
@@ -433,6 +568,7 @@
 		};
 		7721E9F3251C7044002206A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D35A46D0B8515B54E4622D4A /* Pods-BitfinexOrderBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +588,7 @@
 		};
 		7721E9F4251C7044002206A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F6E86AFC44E59EEF5105AEC /* Pods-BitfinexOrderBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +608,7 @@
 		};
 		7721E9F6251C7044002206A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE950A989223220C176F97BA /* Pods-BitfinexOrderBookTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +631,7 @@
 		};
 		7721E9F7251C7044002206A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10D4861EF4A434D7662E445A /* Pods-BitfinexOrderBookTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +654,7 @@
 		};
 		7721E9F9251C7044002206A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2AA1B216BEFAAD88F9EC02F /* Pods-BitfinexOrderBookUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +675,7 @@
 		};
 		7721E9FA251C7044002206A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F85A53FB1389180FC492FCD /* Pods-BitfinexOrderBookUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

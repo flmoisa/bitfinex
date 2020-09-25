@@ -7,7 +7,8 @@ target 'BitfinexOrderBook' do
 
   # Pods for BitfinexOrderBook
   pod 'Starscream'
-  
+  pod 'SwiftyJSON'
+  pod 'SwiftProtobuf'
 
   target 'BitfinexOrderBookTests' do
     inherit! :search_paths

@@ -1,16 +1,24 @@
 PODS:
   - Starscream (4.0.4)
+  - SwiftProtobuf (1.12.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Starscream
+  - SwiftProtobuf
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Starscream
+    - SwiftProtobuf
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
+  SwiftProtobuf: 4ef85479c18ca85b5482b343df9c319c62bda699
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: e8f3f1f3a80c0f34d5d8a92c6995503db22220ae
+PODFILE CHECKSUM: 20742c78c558862e5bdacb9af25c1c4af56f5e13
 
 COCOAPODS: 1.10.0.rc.1

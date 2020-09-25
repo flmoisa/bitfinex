@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+message TickerRequest {
+    string event = 1;
+    string channel = 2;
+    string symbol = 3;
+}
+
+message TickerResponse {
+    string event = 1;
+    string channel = 2;
+    int64 chanId = 3;
+    string symbol = 4;
+    string pair = 5;
+}
+
+message BookRequest {
+    string event = 1;
+    string channel = 2;
+    string symbol = 3;
+    string prec = 4;
+    string freq = 5;
+    string len = 6;
+}
+
+message BookResponse {
+    string event = 1;
+    string channel = 2;
+    int64 chanId = 3;
+    string symbol = 4;
+    string prec = 5;
+    string freq = 6;
+    string len = 7;
+    string pair = 8;
+}
+

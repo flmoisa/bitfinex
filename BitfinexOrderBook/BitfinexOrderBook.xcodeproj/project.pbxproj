@@ -195,8 +195,8 @@
 		77847C21251DE47D00F87EEC /* WS */ = {
 			isa = PBXGroup;
 			children = (
-				77847BEE251DD66300F87EEC /* DataModel */,
 				77847C1C251DE46C00F87EEC /* WebSocketService.swift */,
+				77847BEE251DD66300F87EEC /* DataModel */,
 			);
 			path = WS;
 			sourceTree = "<group>";

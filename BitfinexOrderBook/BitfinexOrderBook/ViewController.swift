@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var buysTableView: UITableView!
+    @IBOutlet weak var sellsTableView: UITableView!
+    
     var wsService = WebSocketService()
     
     override func viewDidLoad() {

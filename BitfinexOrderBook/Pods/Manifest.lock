@@ -1,24 +1,38 @@
 PODS:
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
   - Starscream (4.0.4)
   - SwiftProtobuf (1.12.0)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - RxCocoa
+  - RxSwift
   - Starscream
   - SwiftProtobuf
   - SwiftyJSON
 
 SPEC REPOS:
   trunk:
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - Starscream
     - SwiftProtobuf
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwiftProtobuf: 4ef85479c18ca85b5482b343df9c319c62bda699
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 20742c78c558862e5bdacb9af25c1c4af56f5e13
+PODFILE CHECKSUM: 729a330804753779a7aca9931803e15ed5b70b2f
 
 COCOAPODS: 1.10.0.rc.1

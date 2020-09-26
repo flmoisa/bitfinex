@@ -8,14 +8,23 @@
 import Foundation
 import Starscream
 import SwiftyJSON
+import RxRelay
+import RxSwift
 
 class WebSocketService {
+    
+    static var shared = WebSocketService()
     
     private var socket: WebSocket?
     private var isConnected = false
     
     private var bookChannelId: Int?
     private var tickerChannelId: Int?
+    
+    private var tickerRelay = BehaviorRelay<Ticker?>(value: nil)
+    func tickerObservable() -> Observable<Ticker?> {
+        return tickerRelay.asObservable()
+    }
     
     init() {
         
@@ -123,6 +132,7 @@ class WebSocketService {
                         volume: values[7].floatValue,
                         high: values[8].floatValue,
                         low: values[9].floatValue)
+                    tickerRelay.accept(ticker)
                     print("Ticker: \(ticker)")
                     return
                 }

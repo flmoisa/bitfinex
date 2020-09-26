@@ -15,6 +15,7 @@
 		7721E9D8251C7043002206A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7721E9D6251C7043002206A0 /* LaunchScreen.storyboard */; };
 		7721E9E3251C7044002206A0 /* BitfinexOrderBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721E9E2251C7044002206A0 /* BitfinexOrderBookTests.swift */; };
 		7721E9EE251C7044002206A0 /* BitfinexOrderBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721E9ED251C7044002206A0 /* BitfinexOrderBookUITests.swift */; };
+		776ECEEE251F6A2F00E009C0 /* NumberFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776ECEED251F6A2F00E009C0 /* NumberFormats.swift */; };
 		77847BD1251D3E7300F87EEC /* Bitfinex.proto in Sources */ = {isa = PBXBuildFile; fileRef = 77847BD0251D3E7300F87EEC /* Bitfinex.proto */; };
 		77847BE1251D41C800F87EEC /* Bitfinex.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77847BE0251D41C800F87EEC /* Bitfinex.pb.swift */; };
 		77847C1D251DE46C00F87EEC /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77847C1C251DE46C00F87EEC /* WebSocketService.swift */; };
@@ -63,6 +64,7 @@
 		7721E9E9251C7044002206A0 /* BitfinexOrderBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitfinexOrderBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7721E9ED251C7044002206A0 /* BitfinexOrderBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitfinexOrderBookUITests.swift; sourceTree = "<group>"; };
 		7721E9EF251C7044002206A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		776ECEED251F6A2F00E009C0 /* NumberFormats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormats.swift; sourceTree = "<group>"; };
 		77847BD0251D3E7300F87EEC /* Bitfinex.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = Bitfinex.proto; sourceTree = "<group>"; };
 		77847BE0251D41C800F87EEC /* Bitfinex.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bitfinex.pb.swift; sourceTree = "<group>"; };
 		77847C1C251DE46C00F87EEC /* WebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketService.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		7721E9CA251C7041002206A0 /* BitfinexOrderBook */ = {
 			isa = PBXGroup;
 			children = (
+				776ECEEC251F69C200E009C0 /* Utils */,
 				77847C21251DE47D00F87EEC /* WS */,
 				7721E9CB251C7041002206A0 /* AppDelegate.swift */,
 				7721E9CD251C7042002206A0 /* SceneDelegate.swift */,
@@ -171,6 +174,14 @@
 				7721E9EF251C7044002206A0 /* Info.plist */,
 			);
 			path = BitfinexOrderBookUITests;
+			sourceTree = "<group>";
+		};
+		776ECEEC251F69C200E009C0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				776ECEED251F6A2F00E009C0 /* NumberFormats.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		77847BCF251D3E4400F87EEC /* Proto */ = {
@@ -437,6 +448,7 @@
 				77847C1D251DE46C00F87EEC /* WebSocketService.swift in Sources */,
 				77847BE1251D41C800F87EEC /* Bitfinex.pb.swift in Sources */,
 				7721E9CC251C7041002206A0 /* AppDelegate.swift in Sources */,
+				776ECEEE251F6A2F00E009C0 /* NumberFormats.swift in Sources */,
 				7721E9CE251C7042002206A0 /* SceneDelegate.swift in Sources */,
 				77847BD1251D3E7300F87EEC /* Bitfinex.proto in Sources */,
 			);

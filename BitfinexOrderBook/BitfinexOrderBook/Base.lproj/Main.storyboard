@@ -171,7 +171,13 @@
                     </view>
                     <connections>
                         <outlet property="buysTableView" destination="dOY-pG-fmx" id="325-YW-iIg"/>
+                        <outlet property="changeLabel" destination="sle-VW-aSj" id="8XQ-he-voy"/>
+                        <outlet property="highLabel" destination="LaL-DQ-ecI" id="xmp-NE-KAV"/>
+                        <outlet property="lastLabel" destination="5rO-G1-8bY" id="dRr-I5-DU1"/>
+                        <outlet property="lowLabel" destination="fJk-Bu-wXj" id="yOX-cY-SJI"/>
                         <outlet property="sellsTableView" destination="swX-4Y-9wr" id="dh7-hf-0wE"/>
+                        <outlet property="symbolLabel" destination="Le8-vM-Ufz" id="DkD-6C-4aw"/>
+                        <outlet property="volumeLabel" destination="1yd-9K-hDp" id="xtn-sj-LkL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

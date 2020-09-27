@@ -7,7 +7,13 @@
 
 import Foundation
 
-class BookStore {
+struct BookLine {
+    let price: Float
+    let count: Int
+    let amount: Float
+}
+
+class OrderBook {
     
     var bids = [Float:BookLine]()
     var asks = [Float:BookLine]()

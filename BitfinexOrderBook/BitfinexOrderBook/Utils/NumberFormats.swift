@@ -41,4 +41,15 @@ extension Float {
             return formatter.string(from: self as NSNumber) ?? ""
         }
     }
+    
+    var amountFormat: String {
+        get {
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            formatter.minimumSignificantDigits = 5
+            formatter.maximumSignificantDigits = 5
+            formatter.negativePrefix = ""
+            return formatter.string(from: self as NSNumber) ?? ""
+        }
+    }
 }

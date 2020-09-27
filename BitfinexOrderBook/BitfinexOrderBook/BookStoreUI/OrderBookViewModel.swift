@@ -9,9 +9,9 @@ import Foundation
 import RxRelay
 import RxSwift
 
-class BookStoreViewModel  {
+class OrderBookViewModel  {
     
-    private var bookStore = BookStore()
+    private var orderBook = OrderBook()
     
     let tickerObservable = WebSocketService.shared.tickerObservable()
     let bookLineObservable = WebSocketService.shared.bookLineObservable()
@@ -22,8 +22,8 @@ class BookStoreViewModel  {
                 return bookLine?.isBid == true
             }.map { [weak self] (bookLine) -> [BookLine] in
                 if let bookLine = bookLine {
-                    self?.bookStore.processNewLine(line: bookLine)
-                    return self?.bookStore.sortedBids ?? []
+                    self?.orderBook.processNewLine(line: bookLine)
+                    return self?.orderBook.sortedBids ?? []
                 }
                 return []
             }
@@ -36,8 +36,8 @@ class BookStoreViewModel  {
                 return bookLine?.isAsk == true
             }.map { [weak self] (bookLine) -> [BookLine] in
                 if let bookLine = bookLine {
-                    self?.bookStore.processNewLine(line: bookLine)
-                    return self?.bookStore.sortedAsks ?? []
+                    self?.orderBook.processNewLine(line: bookLine)
+                    return self?.orderBook.sortedAsks ?? []
                 }
                 return []
             }

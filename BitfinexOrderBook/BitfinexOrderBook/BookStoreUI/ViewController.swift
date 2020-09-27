@@ -22,25 +22,15 @@ class ViewController: UIViewController {
     
     private var disposeBag = DisposeBag()
     
-    private let tickerObservable = WebSocketService.shared.tickerObservable()
+    private var bookStoreModel = BookStoreViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        buysTableView.register(UITableViewCell.self, forCellReuseIdentifier: "buysCell")
+        sellsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "sellsCell")
         
-        
-        
-//        tickerObservable.map { (ticker) -> String in
-//            if let ticker = ticker {
-//                return ticker.lastPrice.priceFormat
-//            }
-//            return ""
-//        }.bind(to: self.lastLabel.rx.text)
-        
-        
-        
-        
-        tickerObservable.bind { [unowned self] (ticker) in
+        bookStoreModel.tickerObservable.bind { [unowned self] (ticker) in
             if let ticker = ticker {
                 self.lowLabel.text = ticker.low.priceFormat
                 self.lastLabel.text = ticker.lastPrice.priceFormat
@@ -49,6 +39,18 @@ class ViewController: UIViewController {
                 self.changeLabel.text = (ticker.dailyChangeRelative).percentFormat
             }
         }.disposed(by: disposeBag)
+        
+        bookStoreModel.bidsObservable.bind(to: buysTableView.rx.items(cellIdentifier: "buysCell", cellType: UITableViewCell.self)){ tableView, item, cell in
+            cell.textLabel?.text = item.price.priceFormat
+            cell.detailTextLabel?.text = item.amount.priceFormat
+        }
+        .disposed(by: disposeBag)
+        
+        bookStoreModel.asksObservable.bind(to: sellsTableView.rx.items(cellIdentifier: "sellsCell", cellType: UITableViewCell.self)){ tableView, item, cell in
+            cell.textLabel?.text = item.price.priceFormat
+            cell.detailTextLabel?.text = item.amount.priceFormat
+        }
+        .disposed(by: disposeBag)
     }
     
 }

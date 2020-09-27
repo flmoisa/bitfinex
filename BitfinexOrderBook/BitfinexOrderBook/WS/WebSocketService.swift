@@ -26,6 +26,11 @@ class WebSocketService {
         return tickerRelay.asObservable()
     }
     
+    private var bookLineRelay = BehaviorRelay<BookLine?>(value: nil)
+    func bookLineObservable() -> Observable<BookLine?> {
+        return bookLineRelay.asObservable()
+    }
+    
     init() {
         
         var request = URLRequest(url: URL(string: "wss://api-pub.bitfinex.com/ws/2")!)
@@ -144,6 +149,17 @@ class WebSocketService {
                 if values.type == .array, values.count > 0 {
                     
                     if values[0].type == .array {
+                        
+                        let lines = values.arrayValue
+                        lines.forEach { jsonLine in
+                            let bookLine = BookLine(
+                                price: jsonLine[0].floatValue,
+                                count: jsonLine[1].intValue,
+                                amount: jsonLine[2].floatValue)
+                            bookLineRelay.accept(bookLine)
+                        }
+                        
+                        
                         print("Book snapshot")
                     } else {
                         
@@ -152,6 +168,7 @@ class WebSocketService {
                             count: values[1].intValue,
                             amount: values[2].floatValue)
                         
+                        bookLineRelay.accept(bookLine)
                         print("Book line: \(bookLine)")
                         return
                     }
@@ -160,5 +177,9 @@ class WebSocketService {
                 
             }
         }
+    }
+    
+    private func decodeBookLine(json: JSON) {
+        
     }
 }

@@ -13,8 +13,9 @@ class OrderBookViewModel  {
     
     private var orderBook = OrderBook()
     
-    let tickerObservable = OrderBookWebService.shared.tickerObservable()
-    let bookLineObservable = OrderBookWebService.shared.bookLineObservable()
+    let tickerObservable = OrderBookWebService.shared.tickerRelay.asObservable()
+    let bookLineObservable = OrderBookWebService.shared.bookLineRelay.asObservable()
+    let isLoadingObservable = OrderBookWebService.shared.isLoadingRelay.asObservable()
     
     var bidsObservable: Observable<[BookLine]> {
         get {

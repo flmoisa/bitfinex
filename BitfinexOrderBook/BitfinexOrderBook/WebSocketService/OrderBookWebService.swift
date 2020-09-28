@@ -21,15 +21,9 @@ class OrderBookWebService {
     private var bookChannelId: Int?
     private var tickerChannelId: Int?
     
-    private var tickerRelay = BehaviorRelay<Ticker?>(value: nil)
-    func tickerObservable() -> Observable<Ticker?> {
-        return tickerRelay.asObservable()
-    }
-    
-    private var bookLineRelay = BehaviorRelay<BookLine?>(value: nil)
-    func bookLineObservable() -> Observable<BookLine?> {
-        return bookLineRelay.asObservable()
-    }
+    private(set) var tickerRelay = BehaviorRelay<Ticker?>(value: nil)
+    private(set) var bookLineRelay = BehaviorRelay<BookLine?>(value: nil)
+    private(set) var isLoadingRelay = BehaviorRelay<Bool>(value: true)
     
     init() {
         webSocketHandler = WebSocketHandler(
@@ -42,7 +36,7 @@ class OrderBookWebService {
                 self.decodeMessage(message: message)
             },
             onError: { (error) in
-                
+                // handle error
             })
     }
     
@@ -93,6 +87,9 @@ class OrderBookWebService {
         if json.type == .array, json.count == 2 {
             
             if json[0].intValue == tickerChannelId {
+                
+                // ticker message
+                
                 let values = json[1]
                 if values.type == .array, values.count == 10 {
                     let ticker = Ticker(
@@ -114,10 +111,14 @@ class OrderBookWebService {
             
             if json[0].intValue == bookChannelId {
                 
+                // order book message
+                
                 let values = json[1]
                 if values.type == .array, values.count > 0 {
                     
                     if values[0].type == .array {
+                        
+                        // Book snapshot
                         
                         let lines = values.arrayValue
                         lines.forEach { jsonLine in
@@ -128,9 +129,11 @@ class OrderBookWebService {
                             bookLineRelay.accept(bookLine)
                         }
                         
+                        isLoadingRelay.accept(false)
                         
-                        print("Book snapshot")
                     } else {
+                        
+                        // Book line
                         
                         let bookLine = BookLine(
                             price: values[0].floatValue,
@@ -138,7 +141,7 @@ class OrderBookWebService {
                             amount: values[2].floatValue)
                         
                         bookLineRelay.accept(bookLine)
-                        print("Book line: \(bookLine)")
+                        
                         return
                     }
                     

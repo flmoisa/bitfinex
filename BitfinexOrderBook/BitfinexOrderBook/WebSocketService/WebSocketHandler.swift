@@ -7,15 +7,17 @@
 
 import Foundation
 import Starscream
+import RxRelay
 
 class WebSocketHandler {
     
     private var socket: WebSocket?
-    private var isConnected = false
     
     private var onConnected: () -> ()
     private var onMessage: (String) -> ()
     private var onError: (Error) -> ()
+    
+    private(set) var isConnectedRelay = BehaviorRelay<Bool>(value: false)
     
     init(endPoint: String, onConnected: @escaping () -> (), onMessage: @escaping (String) -> (), onError: @escaping (Error) -> ()) {
         
@@ -30,12 +32,12 @@ class WebSocketHandler {
         socket?.onEvent = { [unowned self] event in
             switch event {
             case .connected(let headers):
-                self.isConnected = true
+                self.isConnectedRelay.accept(true)
                 print("websocket is connected: \(headers)")
                 self.onConnected()
                 
             case .disconnected(let reason, let code):
-                self.isConnected = false
+                self.isConnectedRelay.accept(false)
                 print("websocket is disconnected: \(reason) with code: \(code)")
                 
             case .text(let string):
@@ -53,9 +55,9 @@ class WebSocketHandler {
             case .reconnectSuggested(_):
                 break
             case .cancelled:
-                self.isConnected = false
+                self.isConnectedRelay.accept(false)
             case .error(let error):
-                self.isConnected = false
+                self.isConnectedRelay.accept(false)
                 print("Received error: \(error.debugDescription)")
                 if let error = error {
                     self.onError(error)

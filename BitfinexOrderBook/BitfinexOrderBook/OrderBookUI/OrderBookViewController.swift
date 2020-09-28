@@ -19,10 +19,11 @@ class OrderBookViewController: UIViewController {
     @IBOutlet weak var volumeLabel: UILabel!
     @IBOutlet weak var symbolLabel: UILabel!
     @IBOutlet weak var changeLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var disposeBag = DisposeBag()
     
-    private var orderBookMNodel = OrderBookViewModel()
+    private var orderBookModel = OrderBookViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class OrderBookViewController: UIViewController {
         configureTableView(tableView: buysTableView)
         configureTableView(tableView: sellsTableView)
         
-        orderBookMNodel.tickerObservable.bind { [unowned self] (ticker) in
+        orderBookModel.tickerObservable.bind { [unowned self] (ticker) in
             if let ticker = ticker {
                 self.lowLabel.text = ticker.low.priceFormat
                 self.lastLabel.text = ticker.lastPrice.priceFormat
@@ -41,15 +42,20 @@ class OrderBookViewController: UIViewController {
             }
         }.disposed(by: disposeBag)
         
-        orderBookMNodel.bidsObservable.bind(to: buysTableView.rx.items(cellIdentifier: "OrderBookTableViewCell", cellType: OrderBookTableViewCell.self)){ tableView, bookLine, cell in
+        orderBookModel.bidsObservable.bind(to: buysTableView.rx.items(cellIdentifier: "OrderBookTableViewCell", cellType: OrderBookTableViewCell.self)){ tableView, bookLine, cell in
             cell.configureWithModel(bookLine: bookLine)
         }
         .disposed(by: disposeBag)
         
-        orderBookMNodel.asksObservable.bind(to: sellsTableView.rx.items(cellIdentifier: "OrderBookTableViewCell", cellType: OrderBookTableViewCell.self)){ tableView, bookLine, cell in
+        orderBookModel.asksObservable.bind(to: sellsTableView.rx.items(cellIdentifier: "OrderBookTableViewCell", cellType: OrderBookTableViewCell.self)){ tableView, bookLine, cell in
             cell.configureWithModel(bookLine: bookLine)
         }
         .disposed(by: disposeBag)
+        
+        orderBookModel.isLoadingObservable.bind { [unowned self] (isLoading) in
+            isLoading == true ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
+            activityIndicator.isHidden = isLoading == false
+        }.disposed(by: disposeBag)
     }
     
     private func configureTableView(tableView: UITableView) {

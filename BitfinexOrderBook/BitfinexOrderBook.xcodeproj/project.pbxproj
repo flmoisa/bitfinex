@@ -20,6 +20,7 @@
 		776ECF0925209BA400E009C0 /* OrderBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776ECF0825209BA400E009C0 /* OrderBookViewModel.swift */; };
 		776ECF3D2520E5CB00E009C0 /* OrderBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776ECF3B2520E5CB00E009C0 /* OrderBookTableViewCell.swift */; };
 		776ECF3E2520E5CB00E009C0 /* OrderBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776ECF3C2520E5CB00E009C0 /* OrderBookTableViewCell.xib */; };
+		776ECF4B2521012B00E009C0 /* OrderBookHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776ECF4A2521012B00E009C0 /* OrderBookHeaderView.xib */; };
 		77847BD1251D3E7300F87EEC /* Bitfinex.proto in Sources */ = {isa = PBXBuildFile; fileRef = 77847BD0251D3E7300F87EEC /* Bitfinex.proto */; };
 		77847BE1251D41C800F87EEC /* Bitfinex.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77847BE0251D41C800F87EEC /* Bitfinex.pb.swift */; };
 		77847C1D251DE46C00F87EEC /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77847C1C251DE46C00F87EEC /* WebSocketService.swift */; };
@@ -72,6 +73,7 @@
 		776ECF0825209BA400E009C0 /* OrderBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookViewModel.swift; sourceTree = "<group>"; };
 		776ECF3B2520E5CB00E009C0 /* OrderBookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookTableViewCell.swift; sourceTree = "<group>"; };
 		776ECF3C2520E5CB00E009C0 /* OrderBookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderBookTableViewCell.xib; sourceTree = "<group>"; };
+		776ECF4A2521012B00E009C0 /* OrderBookHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderBookHeaderView.xib; sourceTree = "<group>"; };
 		77847BD0251D3E7300F87EEC /* Bitfinex.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = Bitfinex.proto; sourceTree = "<group>"; };
 		77847BE0251D41C800F87EEC /* Bitfinex.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bitfinex.pb.swift; sourceTree = "<group>"; };
 		77847C1C251DE46C00F87EEC /* WebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketService.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				7721E9CF251C7042002206A0 /* OrderBookViewController.swift */,
 				776ECF3B2520E5CB00E009C0 /* OrderBookTableViewCell.swift */,
 				776ECF3C2520E5CB00E009C0 /* OrderBookTableViewCell.xib */,
+				776ECF4A2521012B00E009C0 /* OrderBookHeaderView.xib */,
 			);
 			path = BookStoreUI;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				7721E9D8251C7043002206A0 /* LaunchScreen.storyboard in Resources */,
 				776ECF3E2520E5CB00E009C0 /* OrderBookTableViewCell.xib in Resources */,
 				7721E9D5251C7043002206A0 /* Assets.xcassets in Resources */,
+				776ECF4B2521012B00E009C0 /* OrderBookHeaderView.xib in Resources */,
 				7721E9D3251C7042002206A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

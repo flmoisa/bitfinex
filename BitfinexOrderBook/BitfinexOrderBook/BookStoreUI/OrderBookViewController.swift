@@ -76,5 +76,13 @@ extension OrderBookViewController: UITableViewDelegate {
             break
         }
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 32
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UINib(nibName: "OrderBookHeaderView", bundle: Bundle.main).instantiate(withOwner: tableView, options: nil).first as? UIView
+    }
 }
 

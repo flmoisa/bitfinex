@@ -13,8 +13,8 @@ class OrderBookViewModel  {
     
     private var orderBook = OrderBook()
     
-    let tickerObservable = WebSocketService.shared.tickerObservable()
-    let bookLineObservable = WebSocketService.shared.bookLineObservable()
+    let tickerObservable = OrderBookWebService.shared.tickerObservable()
+    let bookLineObservable = OrderBookWebService.shared.bookLineObservable()
     
     var bidsObservable: Observable<[BookLine]> {
         get {

@@ -15,6 +15,7 @@
 		7721E9D8251C7043002206A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7721E9D6251C7043002206A0 /* LaunchScreen.storyboard */; };
 		7721E9E3251C7044002206A0 /* BitfinexOrderBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721E9E2251C7044002206A0 /* BitfinexOrderBookTests.swift */; };
 		7721E9EE251C7044002206A0 /* BitfinexOrderBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721E9ED251C7044002206A0 /* BitfinexOrderBookUITests.swift */; };
+		775BF65D2521E2950089FD41 /* OrderBookWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BF65C2521E2950089FD41 /* OrderBookWebService.swift */; };
 		776ECEEE251F6A2F00E009C0 /* NumberFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776ECEED251F6A2F00E009C0 /* NumberFormats.swift */; };
 		776ECEF32520798B00E009C0 /* OrderBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776ECEF22520798B00E009C0 /* OrderBookModel.swift */; };
 		776ECF0925209BA400E009C0 /* OrderBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776ECF0825209BA400E009C0 /* OrderBookViewModel.swift */; };
@@ -23,7 +24,7 @@
 		776ECF4B2521012B00E009C0 /* OrderBookHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776ECF4A2521012B00E009C0 /* OrderBookHeaderView.xib */; };
 		77847BD1251D3E7300F87EEC /* Bitfinex.proto in Sources */ = {isa = PBXBuildFile; fileRef = 77847BD0251D3E7300F87EEC /* Bitfinex.proto */; };
 		77847BE1251D41C800F87EEC /* Bitfinex.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77847BE0251D41C800F87EEC /* Bitfinex.pb.swift */; };
-		77847C1D251DE46C00F87EEC /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77847C1C251DE46C00F87EEC /* WebSocketService.swift */; };
+		77847C1D251DE46C00F87EEC /* WebSocketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77847C1C251DE46C00F87EEC /* WebSocketHandler.swift */; };
 		77847C38251DED7900F87EEC /* TickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77847C37251DED7900F87EEC /* TickerModel.swift */; };
 		8B95AFBB77A4A072E91317C2 /* Pods_BitfinexOrderBookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BE216DBB121A930BA903E8 /* Pods_BitfinexOrderBookTests.framework */; };
 		C5CE693E6EA3DC6AB74EC373 /* Pods_BitfinexOrderBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A996DF5869161E1E97B14C9 /* Pods_BitfinexOrderBook.framework */; };
@@ -68,6 +69,7 @@
 		7721E9E9251C7044002206A0 /* BitfinexOrderBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitfinexOrderBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7721E9ED251C7044002206A0 /* BitfinexOrderBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitfinexOrderBookUITests.swift; sourceTree = "<group>"; };
 		7721E9EF251C7044002206A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		775BF65C2521E2950089FD41 /* OrderBookWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookWebService.swift; sourceTree = "<group>"; };
 		776ECEED251F6A2F00E009C0 /* NumberFormats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormats.swift; sourceTree = "<group>"; };
 		776ECEF22520798B00E009C0 /* OrderBookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookModel.swift; sourceTree = "<group>"; };
 		776ECF0825209BA400E009C0 /* OrderBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookViewModel.swift; sourceTree = "<group>"; };
@@ -76,7 +78,7 @@
 		776ECF4A2521012B00E009C0 /* OrderBookHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderBookHeaderView.xib; sourceTree = "<group>"; };
 		77847BD0251D3E7300F87EEC /* Bitfinex.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = Bitfinex.proto; sourceTree = "<group>"; };
 		77847BE0251D41C800F87EEC /* Bitfinex.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bitfinex.pb.swift; sourceTree = "<group>"; };
-		77847C1C251DE46C00F87EEC /* WebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketService.swift; sourceTree = "<group>"; };
+		77847C1C251DE46C00F87EEC /* WebSocketHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketHandler.swift; sourceTree = "<group>"; };
 		77847C37251DED7900F87EEC /* TickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerModel.swift; sourceTree = "<group>"; };
 		AE03208B9DF39A20C641AD2F /* Pods_BitfinexOrderBookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitfinexOrderBookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE950A989223220C176F97BA /* Pods-BitfinexOrderBookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitfinexOrderBookTests.debug.xcconfig"; path = "Target Support Files/Pods-BitfinexOrderBookTests/Pods-BitfinexOrderBookTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,15 +155,14 @@
 		7721E9CA251C7041002206A0 /* BitfinexOrderBook */ = {
 			isa = PBXGroup;
 			children = (
+				77847C21251DE47D00F87EEC /* WebSocketService */,
 				77847BEE251DD66300F87EEC /* DataModel */,
-				776ECF0D25209DC200E009C0 /* BookStoreUI */,
+				776ECF0D25209DC200E009C0 /* OrderBookUI */,
 				776ECEEC251F69C200E009C0 /* Utils */,
-				77847C21251DE47D00F87EEC /* WS */,
 				7721E9CB251C7041002206A0 /* AppDelegate.swift */,
 				7721E9CD251C7042002206A0 /* SceneDelegate.swift */,
 				7721E9D4251C7043002206A0 /* Assets.xcassets */,
 				7721E9D6251C7043002206A0 /* LaunchScreen.storyboard */,
-				7721E9D1251C7042002206A0 /* Main.storyboard */,
 				7721E9D9251C7043002206A0 /* Info.plist */,
 			);
 			path = BitfinexOrderBook;
@@ -193,25 +194,26 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		776ECF0D25209DC200E009C0 /* BookStoreUI */ = {
+		776ECF0D25209DC200E009C0 /* OrderBookUI */ = {
 			isa = PBXGroup;
 			children = (
+				7721E9D1251C7042002206A0 /* Main.storyboard */,
 				776ECF0825209BA400E009C0 /* OrderBookViewModel.swift */,
 				7721E9CF251C7042002206A0 /* OrderBookViewController.swift */,
 				776ECF3B2520E5CB00E009C0 /* OrderBookTableViewCell.swift */,
 				776ECF3C2520E5CB00E009C0 /* OrderBookTableViewCell.xib */,
 				776ECF4A2521012B00E009C0 /* OrderBookHeaderView.xib */,
 			);
-			path = BookStoreUI;
+			path = OrderBookUI;
 			sourceTree = "<group>";
 		};
-		77847BCF251D3E4400F87EEC /* Proto */ = {
+		77847BCF251D3E4400F87EEC /* Protobuf */ = {
 			isa = PBXGroup;
 			children = (
 				77847BE0251D41C800F87EEC /* Bitfinex.pb.swift */,
 				77847BD0251D3E7300F87EEC /* Bitfinex.proto */,
 			);
-			path = Proto;
+			path = Protobuf;
 			sourceTree = "<group>";
 		};
 		77847BEE251DD66300F87EEC /* DataModel */ = {
@@ -219,17 +221,18 @@
 			children = (
 				776ECEF22520798B00E009C0 /* OrderBookModel.swift */,
 				77847C37251DED7900F87EEC /* TickerModel.swift */,
-				77847BCF251D3E4400F87EEC /* Proto */,
+				77847BCF251D3E4400F87EEC /* Protobuf */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
 		};
-		77847C21251DE47D00F87EEC /* WS */ = {
+		77847C21251DE47D00F87EEC /* WebSocketService */ = {
 			isa = PBXGroup;
 			children = (
-				77847C1C251DE46C00F87EEC /* WebSocketService.swift */,
+				77847C1C251DE46C00F87EEC /* WebSocketHandler.swift */,
+				775BF65C2521E2950089FD41 /* OrderBookWebService.swift */,
 			);
-			path = WS;
+			path = WebSocketService;
 			sourceTree = "<group>";
 		};
 		B1B68D2EBCEF666544E216E4 /* Frameworks */ = {
@@ -466,10 +469,11 @@
 			files = (
 				77847C38251DED7900F87EEC /* TickerModel.swift in Sources */,
 				7721E9D0251C7042002206A0 /* OrderBookViewController.swift in Sources */,
-				77847C1D251DE46C00F87EEC /* WebSocketService.swift in Sources */,
+				77847C1D251DE46C00F87EEC /* WebSocketHandler.swift in Sources */,
 				77847BE1251D41C800F87EEC /* Bitfinex.pb.swift in Sources */,
 				7721E9CC251C7041002206A0 /* AppDelegate.swift in Sources */,
 				776ECEEE251F6A2F00E009C0 /* NumberFormats.swift in Sources */,
+				775BF65D2521E2950089FD41 /* OrderBookWebService.swift in Sources */,
 				776ECF0925209BA400E009C0 /* OrderBookViewModel.swift in Sources */,
 				776ECF3D2520E5CB00E009C0 /* OrderBookTableViewCell.swift in Sources */,
 				7721E9CE251C7042002206A0 /* SceneDelegate.swift in Sources */,

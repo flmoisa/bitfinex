@@ -22,7 +22,7 @@ class OrderBookViewController: UIViewController {
     
     private var disposeBag = DisposeBag()
     
-    private var bookStoreModel = OrderBookViewModel()
+    private var orderBookMNodel = OrderBookViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class OrderBookViewController: UIViewController {
         configureTableView(tableView: buysTableView)
         configureTableView(tableView: sellsTableView)
         
-        bookStoreModel.tickerObservable.bind { [unowned self] (ticker) in
+        orderBookMNodel.tickerObservable.bind { [unowned self] (ticker) in
             if let ticker = ticker {
                 self.lowLabel.text = ticker.low.priceFormat
                 self.lastLabel.text = ticker.lastPrice.priceFormat
@@ -41,12 +41,12 @@ class OrderBookViewController: UIViewController {
             }
         }.disposed(by: disposeBag)
         
-        bookStoreModel.bidsObservable.bind(to: buysTableView.rx.items(cellIdentifier: "OrderBookTableViewCell", cellType: OrderBookTableViewCell.self)){ tableView, bookLine, cell in
+        orderBookMNodel.bidsObservable.bind(to: buysTableView.rx.items(cellIdentifier: "OrderBookTableViewCell", cellType: OrderBookTableViewCell.self)){ tableView, bookLine, cell in
             cell.configureWithModel(bookLine: bookLine)
         }
         .disposed(by: disposeBag)
         
-        bookStoreModel.asksObservable.bind(to: sellsTableView.rx.items(cellIdentifier: "OrderBookTableViewCell", cellType: OrderBookTableViewCell.self)){ tableView, bookLine, cell in
+        orderBookMNodel.asksObservable.bind(to: sellsTableView.rx.items(cellIdentifier: "OrderBookTableViewCell", cellType: OrderBookTableViewCell.self)){ tableView, bookLine, cell in
             cell.configureWithModel(bookLine: bookLine)
         }
         .disposed(by: disposeBag)

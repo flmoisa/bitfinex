@@ -62,92 +62,24 @@ class OrderBookWebService {
     
     private func decodeMessage(message: String) {
         
-        do {
-            let tickerResponse = try TickerResponse(jsonString: message)
-            if tickerResponse.channel == "ticker" && tickerResponse.event == "subscribed" {
-                tickerChannelId = Int(tickerResponse.chanID)
-                print("Ticker response: \(tickerResponse)")
-                return
-            }
-        } catch {
-        }
+        let decoded = ResponseDecoder.decodeMessage(message: message, tickerChannelId: tickerChannelId, bookChannelId: bookChannelId)
         
-        do {
-            let bookResponse = try BookResponse(jsonString: message)
-            if bookResponse.channel == "book" && bookResponse.event == "subscribed" {
-                bookChannelId = Int(bookResponse.chanID)
-                print("Book response: \(bookResponse)")
-                return
+        switch decoded {
+        case .tickerResponse(let tickerResponse):
+            tickerChannelId = Int(tickerResponse.chanID)
+        case .bookResponse(let bookResponse):
+            bookChannelId = Int(bookResponse.chanID)
+        case .tickerUpdate(let ticker):
+            tickerRelay.accept(ticker)
+        case .bookUpdate(let bookLine):
+            bookLineRelay.accept(bookLine)
+        case .bookSnapshot(let bookLines):
+            bookLines.forEach { (bookLine) in
+                bookLineRelay.accept(bookLine)
             }
-        } catch {
-        }
-        
-        let json = JSON(parseJSON: message)
-        
-        if json.type == .array, json.count == 2 {
-            
-            if json[0].intValue == tickerChannelId {
-                
-                // ticker message
-                
-                let values = json[1]
-                if values.type == .array, values.count == 10 {
-                    let ticker = Ticker(
-                        bid: values[0].floatValue,
-                        bidSize: values[1].floatValue,
-                        ask: values[2].floatValue,
-                        askSize: values[3].floatValue,
-                        dailyChange: values[4].floatValue,
-                        dailyChangeRelative: values[5].floatValue,
-                        lastPrice: values[6].floatValue,
-                        volume: values[7].floatValue,
-                        high: values[8].floatValue,
-                        low: values[9].floatValue)
-                    tickerRelay.accept(ticker)
-                    print("Ticker: \(ticker)")
-                    return
-                }
-            }
-            
-            if json[0].intValue == bookChannelId {
-                
-                // order book message
-                
-                let values = json[1]
-                if values.type == .array, values.count > 0 {
-                    
-                    if values[0].type == .array {
-                        
-                        // Book snapshot
-                        
-                        let lines = values.arrayValue
-                        lines.forEach { jsonLine in
-                            let bookLine = BookLine(
-                                price: jsonLine[0].floatValue,
-                                count: jsonLine[1].intValue,
-                                amount: jsonLine[2].floatValue)
-                            bookLineRelay.accept(bookLine)
-                        }
-                        
-                        isLoadingRelay.accept(false)
-                        
-                    } else {
-                        
-                        // Book line
-                        
-                        let bookLine = BookLine(
-                            price: values[0].floatValue,
-                            count: values[1].intValue,
-                            amount: values[2].floatValue)
-                        
-                        bookLineRelay.accept(bookLine)
-                        
-                        return
-                    }
-                    
-                }
-                
-            }
-        }
+            isLoadingRelay.accept(false)
+        case .none:
+            break // unknown message, ignore
+        }   
     }
 }

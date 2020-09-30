@@ -8,10 +8,12 @@
 import Foundation
 import Starscream
 import RxRelay
+import Reachability
 
 class WebSocketHandler {
     
     private var socket: WebSocket?
+    private var reachability: Reachability?
     
     private var onConnected: () -> ()
     private var onMessage: (String) -> ()
@@ -74,9 +76,25 @@ class WebSocketHandler {
     }
     
     @objc func startService() {
-        socket?.connect()
+        
+        reachability = try? Reachability()
+        reachability?.whenReachable = { [weak self] reachability in
+            self?.reachabilityChanged(isReachable: true)
+        }
+        
+        reachability?.whenUnreachable = { [weak self] reachability in
+            self?.reachabilityChanged(isReachable: false)
+        }
+        
+        try? reachability?.startNotifier()
+        
     }
     @objc func stopService() {
-        socket?.disconnect()
+        
+        reachability?.stopNotifier()
+    }
+    
+    func reachabilityChanged(isReachable: Bool) {
+        isReachable == true ? socket?.connect() : socket?.disconnect()
     }
 }

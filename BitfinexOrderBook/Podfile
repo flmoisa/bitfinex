@@ -11,6 +11,7 @@ target 'BitfinexOrderBook' do
   pod 'SwiftProtobuf'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'ReachabilitySwift'
 
   target 'BitfinexOrderBookTests' do
     inherit! :search_paths
